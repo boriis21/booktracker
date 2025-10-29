@@ -54,19 +54,9 @@ public class Borrower {
         }
     }
 
-    public void returnBook(Book book) {
-        if (book == null) {
-            throw new IllegalArgumentException("Book cannot be null");
-        }
-
-        if (borrowedBooks.remove(book)) {
-            book.getBorrowers().remove(this);
-        }
-    }
-
     @Override
     public String toString() {
-        String borrowedBooksNames = (borrowedBooks == null) ? "No borrowed books" :
+        String borrowedBooksNames = (borrowedBooks.isEmpty()) ? "No borrowed books" :
             borrowedBooks.stream()
                 .map(Book::getTitle)
                 .collect(Collectors.joining(", "));

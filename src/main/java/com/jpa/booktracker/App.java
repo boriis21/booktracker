@@ -80,11 +80,9 @@ public class App {
         try {
             System.out.println("-- Initial authors and their books --");
             authorService.getAllAuthors().forEach(a -> System.out.println(a.toString()));
-            System.out.println();
 
             System.out.println("-- All books --");
             bookService.getAllBooks().forEach(b -> System.out.println(b.toString()));
-            System.out.println();
         } catch (EntityNotFoundException e) {
             System.err.println(e.getMessage());
         }
@@ -131,7 +129,7 @@ public class App {
     private static void demonstrateIdempotency(EntityManager em, BorrowerService borrowerService,
                                                BookService bookService) {
 
-        System.out.println("-- Demonstrating idempotent linking (no duplicates) --");
+        System.out.println("-- Demonstrating idempotent linking --");
         em.getTransaction().begin();
 
         try {
@@ -151,7 +149,7 @@ public class App {
     private static void removeBorrowerFromBook(EntityManager em, BorrowerService borrowerService,
                                                BookService bookService) {
 
-        System.out.println("-- Removing a borrower from a book (bidirectional update) --");
+        System.out.println("-- Removing a borrower from a book --");
         em.getTransaction().begin();
 
         try {
@@ -175,9 +173,7 @@ public class App {
         try {
             System.out.println("-- Final status of books, authors and borrowers --");
             authorService.getAllAuthors().forEach(a -> System.out.println(a.toString()));
-            System.out.println();
             bookService.getAllBooks().forEach(b -> System.out.println(b.toString()));
-            System.out.println();
             borrowerService.getAllBorrowers().forEach(b -> System.out.println(b.toString()));
         } catch (EntityNotFoundException e) {
             System.err.println(e.getMessage());

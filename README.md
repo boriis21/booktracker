@@ -20,9 +20,32 @@ It demonstrates:
 
 ---
 
-## 🧰 Testing
+## ⚙️ Build, Run & Test
 
-To run the tests, execute:
+### 🧩 Build the Project
+Make sure you have **Java 17+** and **Maven 3.9+** installed.
 
 ```bash
-mvn clean test
+mvn clean compile
+```
+
+### 🚀 Run the Demo
+
+```bash
+mvn exec:java -Dexec.mainClass="com.jpa.booktracker.App"
+```
+Uses the configuration in `src/main/resources/META-INF/persistence.xml.`
+
+### 🧪 Run the Tests
+
+```bash
+mvn test
+```
+Runs all unit and integration tests using an in-memory H2 database.
+
+---
+
+## 🧠 Notes
+
+- Lombok is used throughout (`@Getter`, `@Setter`, etc.).
+Make sure annotation processing is enabled in your IDE.
