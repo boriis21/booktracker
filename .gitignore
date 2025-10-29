@@ -1,24 +1,152 @@
-# Compiled class file
+### --- Java ---
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
-*.nar
 *.ear
+*.nar
 *.zip
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Compiled files
+*.log
 hs_err_pid*
 replay_pid*
+
+# Generated files
+bin/
+build/
+out/
+target/
+dist/
+classes/
+generated/
+dependency-reduced-pom.xml
+.mvn/timing.properties
+
+### --- Maven ---
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.mvn/wrapper/maven-wrapper.js
+
+### --- Gradle (if ever used) ---
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+gradle-app.setting
+
+### --- IDEs ---
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+.history/
+
+### --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+### --- OS/System Files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.swp
+*.swo
+
+### --- Logs and Temp ---
+*.log
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+*.pid
+logs/
+tmp/
+temp/
+
+### --- Docker ---
+# Ignore Docker build artifacts
+docker-compose.override.yml
+*.env
+.env.*
+Dockerfile~
+.dockerignore
+docker-compose.yml~
+.docker/
+.docker-volume/
+.docker-cache/
+
+### --- Environment / Secrets ---
+.env
+*.key
+*.pem
+*.crt
+*.cer
+*.der
+*.p12
+*.jks
+*.secrets
+*.keystore
+
+### --- Test and Coverage ---
+.test/
+coverage/
+jacoco.exec
+*.lcov
+*.coverage
+*.coverage.xml
+
+### --- Other Tools ---
+# JetBrains Fleet
+.fleet/
+
+# SonarQube
+.sonar/
+.scannerwork/
+
+# Lombok
+.lombok/
+
+# Spring Boot DevTools
+.spring-boot-devtools.properties
+
+### --- Backup / Misc ---
+*.bak
+*.tmp
+*.swp
+*~
+~$*
+
